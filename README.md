@@ -1,7 +1,7 @@
 # README
 # chat-space
 
-## membersテーブル
+## messagesテーブル
 
 |Column|Type|Options|
 |------|----|-------|
