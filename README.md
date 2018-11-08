@@ -25,19 +25,25 @@
 |password|string|null: false|
 
 ### Association
+- has_many :group_user
+- has_many :groups, through: :group_users
 
 
 
-## groupテーブル
+## groupsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
 
+### Association
+- has_many :group_user
+- has_many :users, through: :group_users
 
 
 
-## group_userテーブル
+
+## group_usersテーブル
 
 |Column|Type|Options|
 |------|----|-------|
