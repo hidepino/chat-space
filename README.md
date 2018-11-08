@@ -42,7 +42,6 @@
 
 
 
-
 ## group_usersテーブル
 
 |Column|Type|Options|
