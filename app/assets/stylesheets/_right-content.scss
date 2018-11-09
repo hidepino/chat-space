@@ -7,18 +7,21 @@
   padding: 0 40px;
   width:calc(100% - 300px);
 
-  &__group-menu{
+  &__group-menu {
     height: 96px;
-    p {
+    h2 {
       color: #999;
       font-size: 20px;
       font-weight: bold;
+      padding:35px 0 0 0;
+    }
 
+    &__edit-button {
+      border:1px solid blue;
+      float:right;
+      padding:0 20px;
+      margin:28px auto ;
       a{
-        border:1px solid blue;
-        float:right;
-        padding:0 20px;
-        margin:28px auto ;
         text-decoration: none;
       }
     }
