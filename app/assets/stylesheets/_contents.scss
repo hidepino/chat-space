@@ -1,3 +1,6 @@
+@import "./clearfix";
+
 .contents {
   width: 100%;
+  @include clearfix();
 }
