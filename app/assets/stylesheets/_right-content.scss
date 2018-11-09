@@ -6,6 +6,11 @@
   padding: 40px;
   width:300px;
 
+  &__group-menu{
+    height: 96px;
+    position: fixed;
+  }
+
   &__chatline {
     background-color:#aaa;
   }
