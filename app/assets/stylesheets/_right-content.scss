@@ -7,6 +7,11 @@
   padding: 0 40px;
   width:calc(100vw - 300px);
 
+  &--small-thin {
+    font-size:12px;
+    color:#999;
+  }
+
   &__group-menu {
     height: 96px;
     h2 {
