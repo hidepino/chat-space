@@ -1,7 +1,32 @@
 .contents
   .side
-    %header.side__header
-      %h3.side__header__name  username
+    .header
+      %h3.header__name  username
+      %ul.header__icons
+        %li.icon
+          = link_to "#" do
+            %i.fa.fa-cog.ico
+        %li.icon
+          = link_to "#" do
+            %i.fa.fa-pencil-square-o.icon
     .groups
+      .group
+        = link_to "#" do
+          .group__name
+          .group__message
   .chat
-
+    .header
+      .left-header
+        .left-header__title
+        %ul.left-header__members
+          %li.member
+      .right-header
+        = link_to "#", class:"right-header__button" do
+          Exit
+    .messages
+      .message
+        .message__info
+          .message__info__username
+          .message__info__posttime
+        .message__detail
+    .input
