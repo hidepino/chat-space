@@ -6,6 +6,7 @@
   height:100vh;
   min-width: 300px;
   padding: 0 40px;
+  position: relative;
   width:calc(100vw - 300px);
 
   &--small-thin {
@@ -51,10 +52,12 @@
   &__post-message {
     height:50px;
     padding:20px 0;
+    position:absolute;
+    bottom: 0;
     input {
       color:#434A54;
       font-size:16px;
-      line-height:16px;
+      line-height:50px;
       padding-left: 10px;
     }
   }
