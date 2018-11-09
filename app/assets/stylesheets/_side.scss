@@ -30,8 +30,16 @@
 
   .groups{
     .group{
-      &__name{}
-      &__message{}
+      padding:20px 0 40px 0;
+      &__name{
+        color:#fff;
+        font-size:15px;
+        margin-bottom: 5px;
+      }
+      &__message{
+        color:#fff;
+        font-size:11px;
+      }
     }
   }
 }
