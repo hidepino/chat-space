@@ -3,16 +3,17 @@
 .right-content {
   box-sizing: border-box;
   float:right;
-  padding: 40px;
-  width:300px;
+  min-width: 300px;
+  padding: 0 40px;
+  width:calc(100% - 300px);
 
   &__group-menu{
     height: 96px;
-    position: fixed;
   }
 
   &__chatline {
     background-color:#aaa;
+    height:calc(100vh - 186px);
   }
 
   &__post-message {
