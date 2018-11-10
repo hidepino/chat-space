@@ -48,6 +48,28 @@
   .messages {
     background-color: #aaa;
     padding-top:46px;
+
+    .message {
+      padding-bottom:40px;
+      &__info {
+        margin-bottom: 10px;
+        &__username{
+          color:#434A54;
+          display:inline-block;
+          font-size:16px;
+          padding-right: 10px;
+        }
+        &__posttime {
+          color:#999;
+          display:inline-block;
+          font-size:12px;
+        }
+      }
+      &__detail {
+        color:#434A54;
+        font-size:14px;
+      }
+    }
   }
 
   .form {
