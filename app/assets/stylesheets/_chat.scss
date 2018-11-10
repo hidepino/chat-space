@@ -50,5 +50,15 @@
     padding-top:46px;
   }
 
-  .form {}
+  .form {
+    height:50px;
+    padding:20px 0;
+    @include clearfix();
+
+    #_text {
+      color:#434A54;
+      font-size:16px;
+      line-height:50px;
+    }
+  }
 }
