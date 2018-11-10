@@ -1,1 +1,10 @@
 @import "./contents";
+
+.chat {
+  background-color: #aaa;
+  box-sizing:border-box;
+  float: right;
+  padding: 0 40px;
+  min-width: 300px;
+  width: calc(100vw - 300px);
+}
