@@ -1,0 +1,34 @@
+.notification
+  チャットグループが作成されました。
+.contents
+  .side
+    .header
+      %h3.header__name  username
+      %ul.header__icons
+        %li.icon
+          = link_to "#" do
+            %i.fa.fa-cog.ico
+        %li.icon
+          = link_to "#" do
+            %i.fa.fa-pencil-square-o.icon
+    = render "side_groups"
+  .chat
+    .header
+      .select-group
+        .select-group__title  group1
+        %ul.select-group__members
+          Member:
+          %li.member user1
+      .edit-group
+        = link_to "#", class:"edit-group__button" do
+          Edit
+    = render "chat_messages"
+    .form
+      = form_for "" do |f|
+        = f.text_field :text, id:"upload-text"
+        %label.upload-label{for: "upload-icon"}
+          %i.fa.fa-picture-o
+          = f.file_field :image, id: "upload-icon"
+        %label.upload-label{for: "send-message"}
+          .send-message Send
+          = f.submit "Send", id:"send-message"

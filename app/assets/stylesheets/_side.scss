@@ -1,0 +1,55 @@
+@import "./contents";
+
+.side-common {
+  width:300px;
+  padding: 0 20px;
+  box-sizing:border-box;
+}
+
+.side {
+  background-color: #2f3e51;
+  box-sizing: border-box;
+  height:100%;
+  float: left;
+  width: 300px;
+
+  .header {
+    @extend .side-common;
+    background-color:#253141;
+    height:100px;
+    padding-top:35px;
+    &__name {
+      color: #fff;
+      display:inline-block;
+      font-size: 16px;
+      font-weight: bold;
+    }
+    &__icons{
+      display:inline-block;
+      float:right;
+      .icon{
+        display: inline;
+        i.fa{
+          color:white;
+        }
+      }
+    }
+  }
+
+  .groups{
+    @extend .side-common;
+    margin: 20px 0 0 0;
+    .group{
+      padding-bottom:40px;
+      &__name{
+        color:#fff;
+        font-size:15px;
+        margin-bottom: 5px;
+      }
+      &__message{
+        color:#fff;
+        font-size:11px;
+      }
+    }
+  }
+}
