@@ -1,20 +1,23 @@
 @import "./contents";
 
-
+.side-common {
+  width:300px;
+  padding: 0 20px;
+  box-sizing:border-box;
+}
 
 .side {
   background-color: #2f3e51;
   box-sizing: border-box;
   height:100%;
   float: left;
-  padding: 0 20px;
   width: 300px;
 
   .header {
+    @extend .side-common;
     background-color:#253141;
-    box-sizing:border-box;
     height:100px;
-    padding:35px 0 0 0;
+    padding-top:35px;
     &__name {
       color: #fff;
       display:inline-block;
@@ -34,9 +37,10 @@
   }
 
   .groups{
+    @extend .side-common;
     margin: 20px 0 0 0;
     .group{
-      padding:0 0 40px 0;
+      padding-bottom:40px;
       &__name{
         color:#fff;
         font-size:15px;
