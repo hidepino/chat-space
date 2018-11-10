@@ -77,5 +77,28 @@
     }
   }
 
-  .form {}
+  .form {
+    height:50px;
+    padding:20px 0;
+    #upload-text {
+      line-height:50px;
+    }
+
+    #upload-icon {
+      display:none;
+    }
+
+    .send-message {
+      background-color:#38AEF0;
+      display:inline-block;
+      line-height:50px;
+      margin-left: 15px;
+      text-align: center;
+      padding: 0 20px;
+    }
+
+    #send-message {
+      display:none;
+    }
+  }
 }

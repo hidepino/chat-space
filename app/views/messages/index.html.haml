@@ -34,8 +34,10 @@
         .message__detail  comment
     .form
       = form_for "" do |f|
-        = f.text_field :text
+        = f.text_field :text, id:"upload-text",:size=>"60"
         %label.upload-label{for: "upload-icon"}
           %i.fa.fa-picture-o
           = f.file_field :image, id: "upload-icon"
-        = f.submit "Send"
+        %label.upload-label{for: "send-message"}
+          .send-message Send
+          = f.submit "Send", id:"send-message"
