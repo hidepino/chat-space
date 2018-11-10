@@ -16,13 +16,13 @@
           .group__message  メッセージ
   .chat
     .header
-      .left-header
-        .left-header__title
-        %ul.left-header__members
+      .select-group
+        .select-group__title
+        %ul.select-group__members
           %li.member
-      .right-header
-        = link_to "#", class:"right-header__button" do
-          Exit
+      .edit-group
+        = link_to "#", class:"edit-group__button" do
+          Edit
     .messages
       .message
         .message__info
