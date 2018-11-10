@@ -1,18 +1,26 @@
 @import "./contents";
 
+
+$chat-width :calc(100vw - 300px);
+
+.common {
+  width:$chat-width;
+  padding: 0 40px;
+  box-sizing:border-box;
+}
+
 .chat {
   box-sizing:border-box;
   float: right;
   height:100%;
-  padding: 0 40px;
-  position: relative;
   min-width: 300px;
-  width: calc(100vw - 300px);
+  width:$chat-width;
 
   .header {
+    @extend .common;
+    @include clearfix();
     border-bottom:1px solid #eee;
     box-sizing:border-box;
-    @include clearfix();
 
     .select-group {
       float:left;
@@ -50,6 +58,7 @@
   }
 
   .messages {
+    @extend .common;
     background-color: #aaa;
     height:calc(100% - 190px);
     padding-top:46px;
@@ -78,19 +87,30 @@
   }
 
   .form {
+    @extend .common;
     height:50px;
-    padding:20px 0;
+    padding:20px 40px;
+
     #upload-text {
       line-height:50px;
+      width:calc(#{$chat-width} - 220px);
+    }
+
+    .upload-label {
     }
 
     #upload-icon {
       display:none;
     }
 
+    i.fa.fa-picture-o{
+      padding-right: 10px;
+    }
+
     .send-message {
       background-color:#38AEF0;
       display:inline-block;
+      font-size:16px;
       line-height:50px;
       margin-left: 15px;
       text-align: center;
