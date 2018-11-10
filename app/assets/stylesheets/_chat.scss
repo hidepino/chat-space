@@ -66,6 +66,15 @@
       display:none;
     }
 
-    .message-sent{}
+    .message-send{
+      background-color:#38AEF0;
+      display:inline-block;
+      float:right;
+      line-height:50px;
+      margin-left: 15px;
+      &--hidden {
+        display:none;
+      }
+    }
   }
 }
