@@ -32,6 +32,6 @@
         .message__detail
     .form
       = form_for "" do |f|
-        = f.text_field :text
-        = f.file_field :image
-        = f.submit "SENT"
+        = f.text_field :text, class:"message-text"
+        = f.file_field :image, class:"message-image"
+        = f.submit "SENT", class:"message-sent"
