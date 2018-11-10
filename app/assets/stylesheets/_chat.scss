@@ -19,12 +19,14 @@
       &__title {
         color: #333;
         font-size: 20px;
+        height:20px;
         margin: 35px 0 0 0;
       }
 
       ul.select-group__members {
         color:#999;
         font-size:12px;
+        height:30px;
         margin: 15px 0 0 0;
 
         li.member {
@@ -49,6 +51,7 @@
 
   .messages {
     background-color: #aaa;
+    height:calc(100% - 190px);
     padding-top:46px;
 
     .message {
