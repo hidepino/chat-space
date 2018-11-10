@@ -74,33 +74,5 @@
     }
   }
 
-  .form {
-    height:50px;
-    padding:20px 0;
-    position:absolute;
-    bottom:0;
-    @include clearfix();
-
-    .message-text {
-      color:#434A54;
-      font-size:16px;
-      line-height:50px;
-      padding-left: 10px;
-    }
-
-    .message-image {
-      display:none;
-    }
-
-    .message-send{
-      background-color:#38AEF0;
-      display:inline-block;
-      float:right;
-      line-height:50px;
-      margin-left: 15px;
-      &--hidden {
-        display:none;
-      }
-    }
-  }
+  .form {}
 }
