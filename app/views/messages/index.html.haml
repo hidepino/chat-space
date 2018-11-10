@@ -11,11 +11,7 @@
         %li.icon
           = link_to "#" do
             %i.fa.fa-pencil-square-o.icon
-    .groups
-      .group
-        = link_to "#" do
-          .group__name  username
-          .group__message  メッセージ
+    = render "side_groups"
   .chat
     .header
       .select-group
@@ -26,12 +22,7 @@
       .edit-group
         = link_to "#", class:"edit-group__button" do
           Edit
-    .messages
-      .message
-        .message__info
-          .message__info__username  username
-          .message__info__posttime  0000/00/00 00:00:00
-        .message__detail  comment
+    = render "chat_messages"
     .form
       = form_for "" do |f|
         = f.text_field :text, id:"upload-text"
