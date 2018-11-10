@@ -3,7 +3,9 @@
 .chat {
   box-sizing:border-box;
   float: right;
+  height:100vh;
   padding: 0 40px;
+  position: relative;
   min-width: 300px;
   width: calc(100vw - 300px);
 
@@ -75,6 +77,8 @@
   .form {
     height:50px;
     padding:20px 0;
+    position:absolute;
+    bottom:0;
     @include clearfix();
 
     .message-text {
