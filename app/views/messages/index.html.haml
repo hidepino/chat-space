@@ -6,10 +6,10 @@
       %ul.header__icons
         %li.icon
           = link_to new_group_path do
-            %i.fa.fa-pencil-square-o.icon
+            = fa_icon 'pencil-square-o', class: 'icon'
         %li.icon
           = link_to edit_user_path(current_user) do
-            %i.fa.fa-cog.ico
+            = fa_icon 'cog', class: 'icon'
     = render "side_groups"
   .chat
     .header
