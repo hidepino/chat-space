@@ -1,4 +1,4 @@
-.chat-common {
+@mixin chat-common() {
   width:$chat-width;
   padding: 0 40px;
   box-sizing:border-box;
@@ -12,7 +12,7 @@
   width:$chat-width;
 
   .header {
-    @extend .chat-common;
+    @include chat-common();
     @include clearfix();
     border-bottom:1px solid #eee;
     box-sizing:border-box;
@@ -53,7 +53,7 @@
   }
 
   .messages {
-    @extend .chat-common;
+    @include chat-common();
     background-color: #aaa;
     height:calc(100% - 190px);
     padding-top:46px;
@@ -82,7 +82,7 @@
   }
 
   .form {
-    @extend .chat-common;
+    @include chat-common();
     height:50px;
     padding:20px 40px;
 
