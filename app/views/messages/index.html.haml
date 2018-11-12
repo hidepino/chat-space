@@ -1,16 +1,15 @@
-.notification
-  チャットグループが作成されました。
 .contents
   .side
     .header
-      %h3.header__name  username
+      %h3.header__name
+        = current_user.name
       %ul.header__icons
         %li.icon
           = link_to "#" do
-            %i.fa.fa-cog.ico
-        %li.icon
-          = link_to "#" do
             %i.fa.fa-pencil-square-o.icon
+        %li.icon
+          = link_to edit_user_path(current_user) do
+            %i.fa.fa-cog.ico
     = render "side_groups"
   .chat
     .header

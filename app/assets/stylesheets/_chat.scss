@@ -1,9 +1,4 @@
-@import "./contents";
-
-
-$chat-width :calc(100vw - 300px);
-
-.chat-common {
+@mixin chat-common() {
   width:$chat-width;
   padding: 0 40px;
   box-sizing:border-box;
@@ -17,7 +12,7 @@ $chat-width :calc(100vw - 300px);
   width:$chat-width;
 
   .header {
-    @extend .chat-common;
+    @include chat-common();
     @include clearfix();
     border-bottom:1px solid #eee;
     box-sizing:border-box;
@@ -58,7 +53,7 @@ $chat-width :calc(100vw - 300px);
   }
 
   .messages {
-    @extend .chat-common;
+    @include chat-common();
     background-color: #aaa;
     height:calc(100% - 190px);
     padding-top:46px;
@@ -87,7 +82,7 @@ $chat-width :calc(100vw - 300px);
   }
 
   .form {
-    @extend .chat-common;
+    @include chat-common();
     height:50px;
     padding:20px 40px;
 
