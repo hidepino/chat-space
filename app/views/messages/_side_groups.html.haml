@@ -1,5 +1,8 @@
 .groups
-  .group
-    = link_to "#" do
-      .group__name  username
-      .group__message  メッセージ
+  - current_user.groups.each do |group|
+    .group
+      = link_to "#" do
+        .group__name
+          = group.name
+        .group__message
+          メッセージはまだありません。
