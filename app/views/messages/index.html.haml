@@ -11,6 +11,7 @@
   /         = link_to edit_user_path(current_user) do
   /           = fa_icon 'cog', class: 'icon'
   /   = render "side_groups"
+  = render 'groups/side'
   .chat
     .header
       .select-group
@@ -21,10 +22,11 @@
       .edit-group
         = link_to "#", class:"edit-group__button" do
           Edit
-    = render "chat_messages"
+    .messages
+      = render @messages
     .form
-      = form_for "" do |f|
-        = f.text_field :text, id:"upload-text"
+      = form_for [@group, @message] do |f|
+        = f.text_field :body, id:"upload-text"
         %label.upload-label{for: "upload-icon"}
           %i.fa.fa-picture-o
           = f.file_field :image, id: "upload-icon"
