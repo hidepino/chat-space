@@ -6,3 +6,6 @@
       = message.created_at
   .message__detail
     = message.body
+  - if message.image.present?
+    .message__image
+      = image_tag message.image,size: "200x100"
