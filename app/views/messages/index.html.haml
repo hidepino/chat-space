@@ -23,8 +23,8 @@
           Edit
     = render "chat_messages"
     .form
-      = form_for "" do |f|
-        = f.text_field :text, id:"upload-text"
+      = form_for [@group, @message] do |f|
+        = f.text_field :body, id:"upload-text"
         %label.upload-label{for: "upload-icon"}
           %i.fa.fa-picture-o
           = f.file_field :image, id: "upload-icon"
