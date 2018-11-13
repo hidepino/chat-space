@@ -22,7 +22,8 @@
       .edit-group
         = link_to "#", class:"edit-group__button" do
           Edit
-    = render "chat_messages"
+    .messages
+      = render @messages
     .form
       = form_for [@group, @message] do |f|
         = f.text_field :body, id:"upload-text"
