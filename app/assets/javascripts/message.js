@@ -45,11 +45,11 @@ $(function(){
         $('.message:last').append(image);
       };
       $('#upload-text').val('');
-      // $(function(){
-      //   $(".messages").animate({
-      //     scrollTop: $('.messages')[bottom-message].scrollHeight
-      //   })
-      // });
+      $(function(){
+        $(".messages").animate({
+          scrollTop:$('.message:last').offset().top
+        })
+      });
     })
   });
 });
