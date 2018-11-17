@@ -25,7 +25,7 @@
     .messages
       = render @messages
     .form
-      = form_for [@group, @message] do |f|
+      = form_for [@group, @message], html: { class: 'message-form' } do |f|
         = f.text_field :body, id:"upload-text"
         %label.upload-label{for: "upload-icon"}
           %i.fa.fa-picture-o
