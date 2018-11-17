@@ -6,30 +6,36 @@ describe MessagesController do
 
   #メッセージ一覧ページを表示するアクション
   describe '#index' do
+    #ログインしている場合
     context 'log in' do
       before do
         login user
         get :index, params: { group_id: group.id }
       end
 
+      #アクション内で定義しているインスタンス変数(message)があるか
       it 'assigns @message' do
         expect(assigns(:message)).to be_a_new(Message)
       end
 
+      #アクション内で定義しているインスタンス変数(group)があるか
       it 'assigns @group' do
         expect(assigns(:group)).to eq group
       end
 
+      #該当するビューが描画されているか
       it 'render index' do
         expect(response).to render_template :index
       end
     end
 
+    #ログインしていない場合
     context 'not log in' do
       before do
         get :index, params:{ group_id: group.id }
       end
 
+      #意図したビューにリダイレクトできているか
       it 'redirects to new_user_session_path' do
         expect(response).to redirect_to(new_user_session_path)
       end
