@@ -37,19 +37,23 @@ $(function(){
       contentType: false
     })
     .done(function(data){
-      console.log(data.image)
-      var html = buildhtml(data);
-      $('.messages').append(html);
-      if (data.image != null ){
-        var image = buildimage(data);
-        $('.message:last').append(image);
-      };
-      $('#upload-text').val('');
-      $(function(){
-        $(".messages").animate({
-          scrollTop:$('.message:last').offset().top
-        })
-      });
+      if (data.image != null || data.body != null){
+        var html = buildhtml(data);
+        $('.messages').append(html);
+        if (data.image != null ){
+          var image = buildimage(data);
+          $('.message:last').append(image);
+        };
+        $('#upload-text').val('');
+        $(function(){
+          $(".messages").animate({
+            scrollTop:$('.message:last').offset().top
+          })
+        });
+      }
+    })
+    .fail(function(){
+      alert('通信に失敗しました');
     })
   });
 });
