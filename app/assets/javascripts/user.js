@@ -9,13 +9,6 @@ $(function(){
     search_list.append(list);
   }
 
-  function appendNoUser(user){
-    var list =`<div class="chat-group-user clearfix">
-                <p class="chat-group-user__name">user</p>
-              </div>`;
-    search_list.append(list);
-  }
-
   var input = $('#user-search-field');
   input.on('keyup', function(){
     var name = input.val();
