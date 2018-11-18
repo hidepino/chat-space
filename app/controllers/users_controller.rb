@@ -1,9 +1,5 @@
 class UsersController < ApplicationController
   def index
-    @users = User.order('name ASC')
-  end
-
-  def search
     @users = User.where('name LIKE(?)',"%#{params[:keyword]}%").limit(20)
     respond_to do |format|
       format.html
