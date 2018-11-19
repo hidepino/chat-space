@@ -38,7 +38,6 @@ $(function(){
         url: "/users",
         data: { keyword: name },
         dataType: 'json',
-        // processData: false,
         contentType: false
       })
       .done(function(users){
