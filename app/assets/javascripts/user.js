@@ -1,5 +1,5 @@
-document.addEventListener("turbolinks:load", function() {
-  $(function(){
+$(function(){
+  $(document).on('turbolinks:load', function(){
     var search_list = $("#user-search-result");
 
     function appendUser(user){
@@ -68,4 +68,4 @@ document.addEventListener("turbolinks:load", function() {
         $(".chat-group-user.clearfix.js-chat-member").eq(index).remove();
       })
   });
-})
+});
