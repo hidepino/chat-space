@@ -19,7 +19,7 @@ $(function(){
 
     var chatmember = $("#chat-group-users");
 
-    function appendChatmenber(username, user_id){
+    function appendChatmenber(user_name, user_id){
       var list = `<div class='chat-group-user clearfix js-chat-member'>
                   <input name='group[user_ids][]' type='hidden' value=${user_id}>
                   <p class='chat-group-user__name'>${user_name}</p>
@@ -62,7 +62,7 @@ $(function(){
         $(this).parent().remove();
         $("#user-search-field").val('');
       })
-      $("#chat-group-users").on("click", ".js-remove-btn", function(){
+      chatmember.on("click", ".js-remove-btn", function(){
         var index = $(".js-remove-btn").index(this) + 1;
         $(".chat-group-user.clearfix.js-chat-member").eq(index).remove();
       })
