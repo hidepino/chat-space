@@ -55,16 +55,17 @@ $(function(){
       })
     });
       search_list.on("click", ".chat-group-user__btn--add", function(){
-        var index = $(".chat-group-user__btn--add").index(this);
-        var user_name = $(".chat-group-user__btn--add").eq(index).attr("data-user-name");
-        var user_id = $(".chat-group-user__btn--add").eq(index).attr("data-user-id");
+        var add_btn = $(this);
+        var index = add_btn.index(this);
+        var user_name = add_btn.eq(index).attr("data-user-name");
+        var user_id = add_btn.eq(index).attr("data-user-id");
         appendChatmenber(user_name, user_id);
         $(this).parent().remove();
         $("#user-search-field").val('');
       })
       chatmember.on("click", ".js-remove-btn", function(){
-        var index = $(".js-remove-btn").index(this) + 1;
-        $(".chat-group-user.clearfix.js-chat-member").eq(index).remove();
+        var index = $(this).index(this);
+        $(this).parent().eq(index).remove();
       })
   });
 });
