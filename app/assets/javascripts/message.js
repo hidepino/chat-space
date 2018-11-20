@@ -65,5 +65,13 @@ $(function(){
   });
   function update(){
     var message_id = $('.message:last').data('id');
+    $.ajax({
+      url:location.href,
+      type: 'GET',
+      data: { id: message_id };
+      dataType: 'json',
+      processData: false,
+      contentType: false
+    })
   }
 });
