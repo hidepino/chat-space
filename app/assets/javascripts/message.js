@@ -58,4 +58,12 @@ $(function(){
       alert('通信に失敗しました');
     })
   });
+
+  // 自動更新
+  $(function(){
+    setInterval(update, 5000);
+  });
+  function update(){
+    var message_id = $('.message:last').data('id');
+  }
 });
