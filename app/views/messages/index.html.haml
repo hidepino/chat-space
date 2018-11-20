@@ -20,7 +20,7 @@
           Member:
           %li.member user1
       .edit-group
-        = link_to "#", class:"edit-group__button" do
+        = link_to edit_group_path(@group), class:"edit-group__button" do
           Edit
     .messages
       = render @messages

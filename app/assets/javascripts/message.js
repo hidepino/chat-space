@@ -45,6 +45,8 @@ $(function(){
           $('.message:last').append(image);
         };
         $('#upload-text').val('');
+        $('#upload-icon').val('');
+        $("#send-message").prop( 'disabled', false )
         $(function(){
           $(".messages").animate({
             scrollTop:$('.message:last').offset().top
