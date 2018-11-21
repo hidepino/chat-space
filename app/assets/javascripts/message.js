@@ -1,6 +1,6 @@
 $(function(){
   function buildhtml(message){
-    var html = `<div class="message">
+    var html = `<div class="message" data-id=${message.id}>
                   <div class="message__info">
                     <div class="message__info__username">
                       ${ message.user_name }
@@ -23,6 +23,17 @@ $(function(){
     return image;
   }
 
+  function buildmessage(data){
+    if (data.image != null || data.body != null){
+      var html = buildhtml(data);
+      $('.messages').append(html);
+      if (data.image != null ){
+        var image = buildimage(data);
+        $('.message:last').append(image);
+      };
+    }
+  }
+
 
   $('.message-form').on('submit', function(e) {
     e.preventDefault();
@@ -37,22 +48,15 @@ $(function(){
       contentType: false
     })
     .done(function(data){
-      if (data.image != null || data.body != null){
-        var html = buildhtml(data);
-        $('.messages').append(html);
-        if (data.image != null ){
-          var image = buildimage(data);
-          $('.message:last').append(image);
-        };
-        $('#upload-text').val('');
-        $('#upload-icon').val('');
-        $("#send-message").prop( 'disabled', false )
-        $(function(){
-          $(".messages").animate({
-            scrollTop:$('.message:last').offset().top
-          })
-        });
-      }
+      buildmessage(data);
+      $('#upload-text').val('');
+      $('#upload-icon').val('');
+      $("#send-message").prop( 'disabled', false )
+      $(function(){
+        $(".messages").animate({
+          scrollTop:$('.message:last').offset().top
+        })
+      });
     })
     .fail(function(){
       alert('通信に失敗しました');
@@ -65,13 +69,20 @@ $(function(){
   });
   function update(){
     var message_id = $('.message:last').data('id');
+    console.log(message_id);
     $.ajax({
       url:location.href,
       type: 'GET',
-      data: { id: message_id };
-      dataType: 'json',
-      processData: false,
-      contentType: false
+      data: { id: message_id },
+      dataType: 'json'
+    })
+    .always(function(new_messages){
+        console.log(new_messages);
+      if (new_messages.length !== 0){
+        new_messages.forEach(function(message){
+          buildmessage(message);
+        })
+      }
     })
   }
 });
